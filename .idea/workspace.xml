@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ba4f76a9-3b56-42e3-89ca-b28860b3734a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/asper/static/css/animate.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/asper/static/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/asper/static/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/asper/static/css/flexslider.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/asper/static/css/icomoon.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/asper/static/css/style.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/asper/static/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/asper/static/js/google_map.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/asper/static/js/jquery.easing.1.3.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/asper/static/js/jquery.flexslider-min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/asper/static/js/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/asper/static/js/jquery.waypoints.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/asper/static/js/modernizr-2.6.2.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/asper/static/js/respond.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/61118130aa4dc01c232fbffad269249a.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/9_final.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/IMG_20190613_102206-01.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/IMG_6069.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/SquareFit_20190614_015309_BWgaogH.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/SquareFit_20190614_015309_fzttVbW.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/april2_gMDtiWU.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/april3_VHWemeb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/web.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asper/static/css/profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/asper/static/css/profile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asper/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/asper/static/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asper/templates/all_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/asper/templates/all_profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asper/templates/firsttask.html" beforeDir="false" afterPath="$PROJECT_DIR$/asper/templates/firsttask.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asper/templates/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/asper/templates/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asper/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/asper/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/theaseperteam/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/theaseperteam/urls.py" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1biUfnvBpwBgdrhuQYHRxg2bMbC" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/asper/static/js" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Anshuman Prajapati\Documents\GitHub\theasperteam\asper\static\js" />
+      <recent name="C:\Users\Anshuman Prajapati\Desktop\theaseperteam\asper\templates" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ba4f76a9-3b56-42e3-89ca-b28860b3734a" name="Default Changelist" comment="" />
+      <created>1589114513811</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1589114513811</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>

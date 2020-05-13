@@ -1,0 +1,52 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="{% static 'images/favicon/favicon.ico' %}">
+
+    <title>Signin</title>
+
+  <!-- <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet" type="text/css" media="all" />fontawesome -->
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="{%static 'css/signin.css' %}" rel="stylesheet">
+  </head>
+
+  <body class="text-center">
+
+  {% if error %}
+<script>
+	alert("Wrong Credential")
+</script>
+{% endif %}
+
+    <form class="form-signin" action="#" method="post">
+      {% csrf_token %}
+            <a href="{% url 'Index' %}">
+              <img class="mb-4" src="{% static 'images/logo/main.png' %}" alt="" width="72" height="72">
+              </a>
+      <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+      <label  class="sr-only">Email address</label>
+      <input class="form-control" type="text" id="input-25" placeholder="Username" required="" name="usr" />
+      <label class="sr-only">Password</label>
+      <input class="form-control" type="password" id="input-26" placeholder="Password " required="" name="pas"/>
+      <div class="checkbox mb-3">
+        <label>
+          <input type="checkbox" value="remember-me"> Remember me
+        </label>
+      </div><center>
+          <input class="btn btn-lg btn-primary btn-block" type="submit" value="Login" style="width: 50%">
+    </center>
+
+
+      <p class="mt-5 mb-3 text-muted">&copy; 2020</p>
+    </form>
+  </body>
+</html>

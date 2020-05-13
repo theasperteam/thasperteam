@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="{% static 'images/favicon/favicon.ico' %}">
+    <title>First Task</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link href="{% static 'css/signup.css' %}" rel="stylesheet">
+</head>
+<body>
+<div class="signup-form">
+    <form action="#" method="post" enctype="multipart/form-data">
+		{% csrf_token %}
+    	<center>
+    		<a href="{% url 'Index' %}">
+    		<img class="mb-4" src="{% static 'images/logo/main.png' %}" alt="" width="72" height="72">
+    		</a>
+    	</center>
+
+		<h2>Complete your First Task, {{ request.user.first_name }} </h2>
+        <div class="or-seperator"><b></b></div>
+        <div class="form-group">{{ first.usr.Q2 }}
+        	<input type="textarea" class="form-control input-lg" name="q1" placeholder="Q1" required="required">
+        </div>
+        <div class="form-group">
+        	<input type="textarea" class="form-control input-lg" name="q2" placeholder="Q2" required="required">
+        </div>
+        <div class="form-group">
+        	<input type="textarea" class="form-control input-lg" name="q3" placeholder="Q3" required="required">
+        </div>
+        <div class="form-group">
+        	<input type="textarea" class="form-control input-lg" name="q4" placeholder="Q4" required="required">
+        </div>
+        <div class="form-group">
+        	<input type="textarea" class="form-control input-lg" name="q5" placeholder="Q5" required="required">
+        </div>
+        <div class="form-group">
+        	<input type="textarea" class="form-control input-lg" name="q6" placeholder="Q6" required="required">
+        </div>
+        <div class="form-group">
+        	<input type="textarea" class="form-control input-lg" name="q7" placeholder="Q7" required="required">
+        </div>
+        <div class="form-group">
+        	<input type="textarea" class="form-control input-lg" name="q8" placeholder="Q8" required="required">
+        </div>
+
+        <div class="form-group"><center>
+			<input type="submit" class="btn btn-success btn-lg btn-block signup-btn" value="Submit" style="width: 50%">
+		</center>
+
+
+        </div>
+    </form>
+
+</body>
+</html>
