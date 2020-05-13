@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="{% static 'images/favicon/favicon.ico' %}">
+<title>Signup</title>
+
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+<link href="{% static 'css/signup.css' %}" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="signup-form">
+    <form action="#" method="post" enctype="multipart/form-data">
+		{% csrf_token %}
+    	<center>{% if error %}
+		<p style="color:red">Username Already Exist</p>
+		{% endif %}
+    		<a href="#">
+    		<img class="mb-4" src="{% static 'images/logo/main.png' %}" alt="" width="72" height="72">
+    		</a>
+    	</center>
+    	
+		<h2>Create an Account</h2>
+
+			
+
+
+		<div class="or-seperator"><b></b></div>
+        <div class="form-group">
+        	<input type="text" class="form-control input-lg" name="username" placeholder="Username" required="required">
+        </div>
+
+			<div class="form-group">
+        		<input type="text" class="form-control input-lg" name="Firstname" placeholder="Firstname" required="required">
+      			  </div>
+
+				<div class="form-group">
+        	<input type="text" class="form-control input-lg" name="Lastname" placeholder="Lastname" required="required">
+     		   </div>
+
+		<div class="form-group">
+        	<input type="email" class="form-control input-lg" name="email" placeholder="Email Address" required="required">
+        </div>
+		<div class="form-group">
+        	<input type="number" class="form-control input-lg" name="Phone" placeholder="Phone Number" required="required">
+     		   </div>
+
+		<div class="form-group">
+            <input type="password" class="form-control input-lg" name="password" placeholder="Password" required="required">
+        </div>
+		<div class="form-group"><center>Profile Image
+			 <input class="form-control input-lg" type="file" placeholder="Image" required="required" name="img" />
+		</center>
+
+        </div>
+
+        <div class="form-group"><center>
+			<input type="submit" class="btn btn-success btn-lg btn-block signup-btn" value="SignUp" style="width: 50%">
+		</center>
+
+
+        </div>
+    </form>
+    <div class="text-center">Already have an account? <a href="{% url 'SignIn' %}">Login here</a></div>
+</div>
+</body>
+</html>
