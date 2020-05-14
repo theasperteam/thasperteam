@@ -65,10 +65,13 @@ def SignUp(request):
         ln = dd['Lastname']
         e = dd['email']
         p = dd['password']
+        p1 = dd['password1']
         phone = dd['Phone']
         i = request.FILES['img']
         udata = User.objects.filter(username=u)
         if udata:
+            error = True
+        elif p1 != p:
             error = True
         else:
             user = User.objects.create_user(username=u, password=p, email=e, first_name=fn, last_name=ln)

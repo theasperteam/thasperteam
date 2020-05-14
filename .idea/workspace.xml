@@ -2,45 +2,45 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba4f76a9-3b56-42e3-89ca-b28860b3734a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/asper/static/css/animate.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asper/static/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asper/static/css/bootstrap.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asper/static/css/flexslider.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asper/static/css/icomoon.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asper/static/css/style.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asper/static/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asper/static/js/google_map.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asper/static/js/jquery.easing.1.3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asper/static/js/jquery.flexslider-min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asper/static/js/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asper/static/js/jquery.waypoints.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asper/static/js/modernizr-2.6.2.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asper/static/js/respond.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/61118130aa4dc01c232fbffad269249a.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/9_final.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/IMG_20190613_102206-01.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/IMG_6069.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/SquareFit_20190614_015309_BWgaogH.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/SquareFit_20190614_015309_fzttVbW.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/april2_gMDtiWU.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/april3_VHWemeb.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/web.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/PSX_20180124_221130.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/asper/static/css/profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/asper/static/css/profile.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/asper/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/asper/static/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/asper/templates/all_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/asper/templates/all_profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/asper/templates/firsttask.html" beforeDir="false" afterPath="$PROJECT_DIR$/asper/templates/firsttask.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/asper/templates/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/asper/templates/profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/asper/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/asper/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asper/templates/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/asper/templates/signup.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/theaseperteam/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/theaseperteam/urls.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/asper/templates/profile.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/asper/templates/signup.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="384">
+              <caret line="61" column="111" selection-start-line="61" selection-start-column="111" selection-end-line="61" selection-end-column="111" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/asper/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#45#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -52,14 +52,61 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/asper/templates/signup.html" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="49" />
+    <option name="width" value="943" />
+    <option name="height" value="1087" />
+  </component>
   <component name="ProjectId" id="1biUfnvBpwBgdrhuQYHRxg2bMbC" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="thasperteam" type="b2602c69:ProjectViewProjectNode" />
+              <item name="thasperteam" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="thasperteam" type="b2602c69:ProjectViewProjectNode" />
+              <item name="thasperteam" type="462c0819:PsiDirectoryNode" />
+              <item name="asper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="thasperteam" type="b2602c69:ProjectViewProjectNode" />
+              <item name="thasperteam" type="462c0819:PsiDirectoryNode" />
+              <item name="asper" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="thasperteam" type="b2602c69:ProjectViewProjectNode" />
+              <item name="thasperteam" type="462c0819:PsiDirectoryNode" />
+              <item name="theaseperteam" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/asper/static/js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -93,20 +140,81 @@
     </task>
     <servers />
   </component>
+  <component name="ToolWindowManager">
+    <frame x="54" y="-8" width="1874" height="1096" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15174672" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32944915" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
             <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
               <option name="COLUMN_ORDER" />
             </State>
           </value>
         </entry>
       </map>
     </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
-  <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/asper/templates/profile.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asper/templates/signup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="61" column="111" selection-start-line="61" selection-start-column="111" selection-end-line="61" selection-end-column="111" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asper/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>

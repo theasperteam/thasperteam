@@ -23,7 +23,7 @@
     <form action="#" method="post" enctype="multipart/form-data">
 		{% csrf_token %}
     	<center>{% if error %}
-		<p style="color:red">Username Already Exist</p>
+		<p style="color:red">Username Already Exist or password not matched</p>
 		{% endif %}
     		<a href="#">
     		<img class="mb-4" src="{% static 'images/logo/main.png' %}" alt="" width="72" height="72">
@@ -57,6 +57,9 @@
 
 		<div class="form-group">
             <input type="password" class="form-control input-lg" name="password" placeholder="Password" required="required">
+        </div>
+		<div class="form-group">
+            <input type="password" class="form-control input-lg" name="password1" placeholder="Confirm Password" required="required">
         </div>
 		<div class="form-group"><center>Profile Image
 			 <input class="form-control input-lg" type="file" placeholder="Image" required="required" name="img" />
