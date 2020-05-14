@@ -53,9 +53,10 @@
 				<ul>
 					<li><img src="{{ userdata.image.url }}" alt="profile" height="130" width="130"></li>
 					<li>{{ request.user.first_name }} {{ request.user.last_name }}</li><br><br>
+
 					<li><a href="{% url 'Index' %}">Main Home</a></li>
 					<li><a href="#">Blog</a></li>
-					<li><a href="#">Your Work</a></li>
+					<li><a href="{% url 'Work' %}">Work</a></li>
 					<li><a href="#">Your Task</a></li>
 
                      {% if request.user.is_authenticated %}
@@ -74,7 +75,7 @@
 
 		<div id="fh5co-main">
 
-
+		<div class="fh5co-narrow-content">
 			<div class="fh5co-narrow-content">
 				<h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">Profile Information</h2>
 				<div class="row">
@@ -161,8 +162,11 @@
 					</div>
 
 				</div>
+
 			</div>
+
 			<div class="col-xs-12 col-sm-4 emphasis">
+
                     <h4><strong>Number of Student Registered {{ count }} </strong></h4>
 
                     <a href="{% url 'AllProfiles' %}"><span class="fa fa-user"></span> View Profile </a>
@@ -175,6 +179,25 @@
 			 </button>
 			{% endif %}
 		 </center>
+		</div>
+
+			<div class="fh5co-narrow-content">
+				<h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">Upload Work</h2>
+
+					<form action="#" method="post" enctype="multipart/form-data">
+                                                                {% csrf_token %}
+							<input type="text"  placeholder="Project Name"  name="projectname", required="" />
+							<input type="text"  placeholder="Project Type"  name="projecttype" required=""/>
+                             <input type="file"  placeholder=" "  name="projectimg" required=""/>
+
+                     			 <input type="submit"  style="width: 20%"></form>
+
+
+			</div>
+
+
+
+
 			<div class="fh5co-narrow-content">
 				<h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">Recent Blog</h2>
 				<div class="row row-bottom-padded-md">
