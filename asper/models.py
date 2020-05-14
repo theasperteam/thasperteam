@@ -26,3 +26,12 @@ class FirstTask(models.Model):
 
     def __str__(self):
         return self.usr.username
+
+class Project(models.Model):
+    usr = models.ForeignKey(User,on_delete=models.CASCADE,null=True)
+    ProjectName = models.TextField(max_length=10, null=True)
+    ProjectType = models.TextField(max_length=10, null=True)
+    ProjectImg = models.FileField(null=True)
+
+    def __str__(self):
+        return self.usr.username

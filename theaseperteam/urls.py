@@ -31,6 +31,7 @@ urlpatterns = [
     path('logout/', Logout, name='logout'),
     path('firsttask/', FirstTk, name='FirstTask'),
     path('profiles/', AllProfile, name='AllProfiles'),
+    path('work/', Work, name='Work'),
 
 
 ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

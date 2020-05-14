@@ -35,6 +35,12 @@ def Profile(request):
             userdata.phone = phone
             userdata.save()
             return redirect('Profile')
+        elif 'Projectname' in request.POST:
+            Projectname = request.POST['projectname']
+            Profiletitle = request.POST['projecttitle']
+            projectimg = request.FILES['projectimg']
+            Project.objects.create(usr=request.user, ProjectName=Projectname, ProjectTitle=Profiletitle, ProjectImg=projectimg)
+            return redirect('Profile')
         else:
             return redirect('Profile')
 
@@ -103,3 +109,7 @@ def AllProfile(request):
     adata= UserDetail.objects.filter(usr=request.user).first()
     udata = UserDetail.objects.all()
     return render(request, 'all_profile.html', {'udata':udata, 'adata':adata})
+
+def Work(request):
+    userdata = UserDetail.objects.filter(usr=request.user).first()
+    return render(request, 'work.html',{'userdata': userdata})
