@@ -56,8 +56,10 @@ def SignIn(request):
     d = {"error": error}
     return render(request, 'signin.html', d)
 
+
 def SignUp(request):
     error = False
+    perror = False
     if request.method == 'POST':
         dd = request.POST
         u = dd['username']
@@ -72,12 +74,12 @@ def SignUp(request):
         if udata:
             error = True
         elif p1 != p:
-            error = True
+            perror = True
         else:
             user = User.objects.create_user(username=u, password=p, email=e, first_name=fn, last_name=ln)
             UserDetail.objects.create(usr=user, image=i, phone=phone)
             return redirect('SignIn')
-    d = {"error": error}
+    d = {"error": error, 'perror': perror}
     return render(request, 'signup.html', d)
 
 def Logout(request):
@@ -99,8 +101,9 @@ def FirstTk(request):
         q8 = d2['q8']
         FirstTask.objects.create(usr=request.user, Q1=q1, Q2=q2, Q3=q3, Q4=q4, Q5=q5, Q6=q6, Q7=q7, Q8=q8)
         return redirect('Profile')
-    f = {userdata:'userdata'}
+    f = {userdata: 'userdata'}
     return render(request, 'firsttask.html', f)
+
 
 def AllProfile(request):
     adata= UserDetail.objects.filter(usr=request.user).first()

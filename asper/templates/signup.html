@@ -23,7 +23,10 @@
     <form action="#" method="post" enctype="multipart/form-data">
 		{% csrf_token %}
     	<center>{% if error %}
-		<p style="color:red">Username Already Exist or password not matched</p>
+		<p style="color:red">Username Already Exist</p>
+		{% endif %}
+			{% if perror %}
+		<p style="color:red">Password Not Matched!!!</p>
 		{% endif %}
     		<a href="#">
     		<img class="mb-4" src="{% static 'images/logo/main.png' %}" alt="" width="72" height="72">
