@@ -57,7 +57,7 @@
 					<li><a href="{% url 'Index' %}">Main Home</a></li>
 					<li><a href="#">Blog</a></li>
 					<li><a href="{% url 'Work' %}">Work</a></li>
-					<li><a href="#">Your Task</a></li>
+					<li><a href="{% url 'Yourtask' %}">Your Task</a></li>
 
                      {% if request.user.is_authenticated %}
                               <li><a href="{% url 'logout' %}">Log Out</a></li>
@@ -174,28 +174,65 @@
 			<center>{% if first.Q1 != None %}
                 <h2>finished task one</h2>
 			 {% else %}
-			 <button class="btn btn-primary btn-lg">
+			 <button class="btn btn-black btn-lg">
 				 <a href="{% url 'FirstTask' %}">First Task</a>
 			 </button>
 			{% endif %}
 		 </center>
 		</div>
 
-			<div class="fh5co-narrow-content">
-				<h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">Upload Work</h2>
 
-					<form action="#" method="post" enctype="multipart/form-data">
-                                                                {% csrf_token %}
-							<input type="text"  placeholder="Project Name"  name="projectname", required="" />
-							<input type="text"  placeholder="Project Type"  name="projecttype" required=""/>
-                             <input type="file"  placeholder=" "  name="projectimg" required=""/>
+<form action="#" method="post" enctype="multipart/form-data">
+{% csrf_token %}
+		<div class="fh5co-narrow-content">
+				<h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">Upload your Work</h2>
+				<div class="row row-bottom-padded-md">
+					<div class="col-md-3 col-sm-5 col-padding animate-box" data-animate-effect="fadeInLeft">
+						<div class="blog-entry">
 
-                     			 <input type="submit"  style="width: 20%"></form>
+							<div class="desc">
+								<h2>Project Name</h2>
 
+								<p><input type="text" name='projectname' placeholder="Project Name" required=""/></p>
 
-			</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-2 col-sm-5 col-padding animate-box" data-animate-effect="fadeInLeft">
+						<div class="blog-entry">
+							<div class="desc">
+								<h2>Project Type</h2>
 
+								<p><input type="text" name='projecttype' placeholder="Project Title" required=""></p>
 
+							</div>
+						</div>
+					</div>
+					<div class="col-md-2 col-sm-5 col-padding animate-box" data-animate-effect="fadeInLeft">
+						<div class="blog-entry">
+							<div class="desc">
+								<h2>Image</h2>
+
+								<p><input type="file" name='projectimg' placeholder="Project Image" required=""/></p>
+
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-2 col-sm-5 col-padding animate-box" data-animate-effect="fadeInLeft">
+						<div class="blog-entry">
+							<div class="desc">
+								<h2>Submit</h2>
+
+								<p><input type="submit" value="submit"></p>
+
+							</div>
+						</div>
+					</div>
+				</div>
+				</div>
+
+</form>
 
 
 			<div class="fh5co-narrow-content">

@@ -3,15 +3,15 @@ from .models import *
 from django.contrib.auth.models import User
 from django.contrib.auth import login, logout, authenticate
 
-from django.http import HttpResponse
 
 # Create your views here.
 
-def Test(request):
-    return HttpResponse("<h1>test</h1>")
 
 def Index(request):
     return render(request, 'index.html')
+
+def Login2(request):
+    return render(request, 'login.html')
 
 def Team(request):
     return render(request, 'team.html')
@@ -35,11 +35,12 @@ def Profile(request):
             userdata.phone = phone
             userdata.save()
             return redirect('Profile')
-        elif 'Projectname' in request.POST:
+        elif 'projectname' in request.POST:
+
             Projectname = request.POST['projectname']
-            Profiletitle = request.POST['projecttitle']
+            Profiletitle = request.POST['projecttype']
             projectimg = request.FILES['projectimg']
-            Project.objects.create(usr=request.user, ProjectName=Projectname, ProjectTitle=Profiletitle, ProjectImg=projectimg)
+            Project.objects.create(usr=request.user, ProjectName=Projectname, ProjectType=Profiletitle, ProjectImg=projectimg)
             return redirect('Profile')
         else:
             return redirect('Profile')
@@ -106,10 +107,64 @@ def FirstTk(request):
     return render(request, 'firsttask.html', f)
 
 def AllProfile(request):
+
     adata= UserDetail.objects.filter(usr=request.user).first()
     udata = UserDetail.objects.all()
     return render(request, 'all_profile.html', {'udata':udata, 'adata':adata})
 
 def Work(request):
     userdata = UserDetail.objects.filter(usr=request.user).first()
-    return render(request, 'work.html',{'userdata': userdata})
+    pdata = Project.objects.all()
+
+    return render(request, 'work.html',{'userdata': userdata, 'project':pdata})
+
+def Yourtask(request):
+    userdata = UserDetail.objects.filter(usr=request.user).first()
+
+    if userdata.dept == 'Design':
+
+        assi = DesignAssignment.objects.all()
+        design = DesignSubmit.objects.all()
+
+    elif userdata.dept == 'Web':
+
+        assi = WebAssignment.objects.all()
+        design = WebSubmit.objects.all()
+    elif userdata.dept == 'App':
+
+        assi = AppAssignment.objects.all()
+        design = AppSubmit.objects.all()
+    else:
+        return redirect('Profile')
+
+    if request.method == "POST":
+        if 'designimg' in request.FILES:
+
+            i = request.FILES['designimg']
+            n = request.POST['number']
+            print(n)
+            if userdata.dept == 'Design':
+                DesignSubmit.objects.create(usr=request.user, AssignNo=n, Assignmentimng=i)
+                return redirect('Yourtask')
+
+            elif userdata.dept == 'Web':
+                WebSubmit.objects.create(usr=request.user, Assignmentimng=i)
+                return redirect('Yourtask')
+            elif userdata.dept == 'App':
+                AppSubmit.objects.create(usr=request.user, Assignmentimng=i)
+                return redirect('Yourtask')
+
+        elif 'check' in request.POST:
+            if userdata.dept == 'Design':
+                DesignSubmit.objects.update(usr=request.user, Status='True')
+                return redirect('Yourtask')
+            elif userdata.dept == 'Web':
+                WebSubmit.objects.update(usr=request.user, Status='True')
+                return redirect('Yourtask')
+            elif userdata.dept == 'App':
+                AppSubmit.objects.update(usr=request.user, Status='True')
+                return redirect('Yourtask')
+
+
+
+    return render(request, 'youtask.html',{'userdata':userdata, 'assi':assi, 'design':design})
