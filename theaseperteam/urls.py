@@ -21,17 +21,18 @@ from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('test/', Test),
     path('', Index, name='Index'),
     path('team/', Team, name='Team'),
     path('pillar/', Pillar, name='Pillar'),
     path('profile/', Profile, name='Profile'),
     path('signin/', SignIn, name='SignIn'),
+    path('login/', Login2, name='Login2'),
     path('signup/', SignUp, name='SignUp'),
     path('logout/', Logout, name='logout'),
     path('firsttask/', FirstTk, name='FirstTask'),
     path('profiles/', AllProfile, name='AllProfiles'),
     path('work/', Work, name='Work'),
+    path('yourtasks/', Yourtask, name='Yourtask'),
 
 
 ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
