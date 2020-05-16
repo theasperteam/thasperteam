@@ -2,59 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba4f76a9-3b56-42e3-89ca-b28860b3734a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/asper/migrations/0014_designassignment.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asper/migrations/0015_remove_designassignment_assigmentimg.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asper/migrations/0016_designsubmit.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asper/migrations/0017_appassignment_appsubmit_webassignment_websubmit.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asper/migrations/0018_auto_20200515_1828.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asper/migrations/0019_auto_20200515_1916.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asper/migrations/0020_auto_20200515_1953.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asper/migrations/0021_auto_20200515_1955.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asper/migrations/0022_auto_20200515_2002.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asper/migrations/0023_auto_20200515_2115.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asper/static/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asper/static/js/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asper/static/js/lib/stats.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asper/static/js/particles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asper/templates/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asper/templates/youtask.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/DSC_0001.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/DSC_0081.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/IMG_5855-01org_Nh83L8G.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/IMG_7581.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/IMG_7581_4WkAdEo.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/IMG_7581_GWv4WFB.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/IMG_7581_a148Ggf.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/IMG_7581_bdYZKJi.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/IMG_7581_vPoQBXU.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/IMG_7581_z6LZxzC.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/IMG_7681.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/IMG_7681_EtoVCyC.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/IMG_7681_Nd1dIpP.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/IMG_7681_OMH4hJr.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/IMG_7681_VwZBgcO.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/IMG_7681_YAmIQpe.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/IMG_7681_YLPG70y.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/IMG_7681_coT64S8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/IMG_7681_dQ5tC6k.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/IMG_7681_wj0YFco.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/april1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/april1_IYnCUWV.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/april2_0S6FNMD.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/april2_BIRGoCS.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/april2_e371osG.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/april2_hdSYff3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/DSC_6475.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/DSC_6475_t3cW0fS.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/DSC_6489.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/DSC_6493.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/IMG_7581_ldU1Fqk.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/IMG_7681_dHcQrBy.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/asper/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/asper/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/asper/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/asper/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/asper/templates/all_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/asper/templates/all_profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/asper/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/asper/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/asper/templates/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/asper/templates/profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/asper/templates/signin.html" beforeDir="false" afterPath="$PROJECT_DIR$/asper/templates/signin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/asper/templates/work.html" beforeDir="false" afterPath="$PROJECT_DIR$/asper/templates/work.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/asper/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/asper/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/theaseperteam/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/theaseperteam/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/theaseperteam/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/theaseperteam/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
