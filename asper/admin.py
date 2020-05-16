@@ -1,15 +1,10 @@
 from django.contrib import admin
 from .models import *
 
+from import_export.admin import ImportExportModelAdmin
 
 # Register your models here.
-admin.site.register(UserDetail)
-admin.site.register(FirstTask)
-admin.site.register(Project)
 
-admin.site.register(DesignAssignment)
-admin.site.register(DesignSubmit)
-admin.site.register(WebAssignment)
-admin.site.register(WebSubmit)
-admin.site.register(AppAssignment)
-admin.site.register(AppSubmit)
+@admin.register(UserDetail, FirstTask,Project, DesignAssignment, DesignSubmit, WebAssignment, WebSubmit,AppAssignment, AppSubmit)
+class ViewAdmin(ImportExportModelAdmin):
+    pass
