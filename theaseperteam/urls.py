@@ -26,13 +26,15 @@ urlpatterns = [
     path('pillar/', Pillar, name='Pillar'),
     path('profile/', Profile, name='Profile'),
     path('signin/', SignIn, name='SignIn'),
-    path('login/', Login2, name='Login2'),
     path('signup/', SignUp, name='SignUp'),
     path('logout/', Logout, name='logout'),
     path('firsttask/', FirstTk, name='FirstTask'),
     path('profiles/', AllProfile, name='AllProfiles'),
     path('work/', Work, name='Work'),
     path('yourtasks/', Yourtask, name='Yourtask'),
+    path('edit_profile', EditProfile, name='EditProfile'),
+    path('singleprofile/<int:pid>', SingleProfile, name='SingleProfile'),
+
 
 
 ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

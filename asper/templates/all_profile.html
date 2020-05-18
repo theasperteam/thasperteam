@@ -8,6 +8,7 @@
     <title>Profile</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords" content="free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
+	<link rel="icon" href="{% static 'assets2/img/favicon/favicon.ico' %}">
     <link href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <link href="{% static 'css/profile.css' %}" rel="stylesheet">
     <link href="{% static 'css/index.css' %}" rel="stylesheet">
@@ -55,6 +56,7 @@
 					<li>{{ request.user.first_name }} {{ request.user.last_name }}</li><br><br>
 
 					<li><a href="{% url 'Index' %}">Main Home</a></li>
+					 <li><a href="{% url 'Profile' %}">Your Profile</a></li>
 					<li><a href="#">Blog</a></li>
 					<li><a href="{% url 'Work' %}">Work</a></li>
 					<li><a href="{% url 'Yourtask' %}">Your Task</a></li>
@@ -78,16 +80,16 @@
 			<div class="fh5co-narrow-content">
 				<h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">PROFILES</h2>
 				<div class="row row-bottom-padded-md">
-					{% for user in udata %}
+					{% for i in udata %}
                     <div class="col-md-3 col-sm-6 col-padding text-center animate-box">
-						<a href="#" class="work image-popup" style="background-image: url({{ user.image.url }});">
+						<a href="{% url 'SingleProfile' i.id %}" class="work image-popup" style="background-image: url({{ i.image.url }});">
 							<div class="desc">
 
-								<span>{{ user.usr.username }}</span>
-                                <span>{{ user.phone }}</span>
+								<span>{{ i.usr.username }}</span>
+                                <span>{{ i.phone }}</span>
 							</div>
 						</a>
-                        <h3>{{ user.usr.first_name }} {{ user.usr.last_name }}</h3>
+                        <h3>{{ i.usr.first_name }} {{ i.usr.last_name }}</h3>
 					</div>
                     {% endfor %}
 

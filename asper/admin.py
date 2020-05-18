@@ -5,6 +5,6 @@ from import_export.admin import ImportExportModelAdmin
 
 # Register your models here.
 
-@admin.register(UserDetail, FirstTask,Project, DesignAssignment, DesignSubmit, WebAssignment, WebSubmit,AppAssignment, AppSubmit)
+@admin.register(UserDetail, FirstTask,Project, DesignAssignment, DesignSubmit, WebAssignment, WebSubmit,AppAssignment, AppSubmit, UserSkills, UserPort)
 class ViewAdmin(ImportExportModelAdmin):
     pass
