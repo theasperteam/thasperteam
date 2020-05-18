@@ -49,19 +49,25 @@
 		<aside id="fh5co-aside" role="complementary" class="border js-fullheight">
 
 			<h3 id="fh5co-logo">Welcome</a></h3>
+
 			<nav id="fh5co-main-menu" role="navigation">
-				<ul>
+				<ul>{% if request.user.is_authenticated %}
                     <li><a href="{% url 'Profile' %}"><img src="{{ userdata.image.url }}" alt="profile" height="130" width="130"></a></li>
 					<li>{{ request.user.first_name }} {{ request.user.last_name }}</li><br><br>
 
 					<li><a href="{% url 'Index' %}">Main Home</a></li>
+					<li><a href="{% url 'Profile' %}">Your Profile</a></li>
 					<li><a href="#">Blog</a></li>
 					<li><a href="#">Work</a></li>
-					<li><a href="{% url 'Yourtask' %}""{% url 'Index' %}">Your Task</a></li>
+					<li><a href="{% url 'Yourtask' %}">Your Task</a></li>
+					<li><a href="{% url 'logout' %}">Log Out</a></li>
+					{% else %}
+					<li><a href="{% url 'Index'  %}"><img src="{% static 'assets2/img/logo/main.png' %}" alt="profile" height="130" width="130"></a></li>
+					<li>You are Guest User for more do signup</li><br><br>
+					<li><a href="{% url 'Index' %}">Main Home</a></li>
+					<li><a href="{% url 'SignUp' %}">SignUp</a></li>
 
-                     {% if request.user.is_authenticated %}
-                              <li><a href="{% url 'logout' %}">Log Out</a></li>
-                              {% endif %}
+					{% endif %}
 				</ul>
 
 			</nav>
@@ -79,15 +85,16 @@
 			<div class="fh5co-narrow-content">
 				<h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">Portfolio</h2>
 				<div class="row row-bottom-padded-md">
-					{% for user in project %}
+					{% for i in project %}
+
 					<div class="col-md-3 col-sm-6 col-padding text-center animate-box">
-						<a href="#" class="work image-popup" style="background-image: url({{ user.ProjectImg.url }});">
+						<a href="#" class="work image-popup" style="background-image: url({{ i.ProjectImg.url }});">
 							<div class="desc">
-								<h3>{{ user.ProjectName }}</h3>
-								<span>{{ user.ProjectType }}</span>
+								<h3>{{ i.ProjectName }}</h3>
+								<span>{{ i.ProjectType }}</span>
 							</div>
 						</a>
-						<p>Poster by: {{ user }}</p>
+						<p>Posted by: {{ i.usr.username }} on {{ i.ProjectPosted }}</p>
 					</div>
 					{% endfor %}
 

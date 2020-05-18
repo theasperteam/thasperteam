@@ -8,6 +8,7 @@
     <title>Profile</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords" content="free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
+	<link rel="icon" href="{% static 'assets2/img/favicon/favicon.ico' %}">
     <link href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <link href="{% static 'css/profile.css' %}" rel="stylesheet">
     <link href="{% static 'css/index.css' %}" rel="stylesheet">
@@ -55,6 +56,7 @@
 					<li>{{ request.user.first_name }} {{ request.user.last_name }}</li><br><br>
 
 					<li><a href="{% url 'Index' %}">Main Home</a></li>
+					<li><a href="{% url 'Profile' %}">Your Profile</a></li>
 					<li><a href="#">Blog</a></li>
 					<li><a href="{% url 'Work' %}">Work</a></li>
 					<li><a href="#">Your Task</a></li>
@@ -78,41 +80,43 @@
 			<div class="fh5co-narrow-content"><h1>Your Tasks</h1><br><br>
 				<h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">{{ userdata.dept }}</h2>
 
-				{% for user in assi %}
+				{% for i in assi %}
 				<div class="row row-bottom-padded-md">
 					<div class="col-md-2 col-sm-6 col-padding text-center animate-box">
 							<div class="desc">
-								<h3>{{ user.AssigmentNo }}</h3>
-								<span>{{ user.AssignmentDis }}</span>
+								<h3>{{ i.AssigmentNo }}</h3>
+								<span>{{ i.AssignmentDis }}</span>
 							</div>
 
-					</div>
+					</div><!--
 					<div class="col-md-2 col-sm-6 col-padding text-center animate-box">
 							<div class="desc">
-								<h3>Status</h3>
-								<span>Status</span><br>
-								<p>Deadline</p>
+								<h3>Deadline</h3>
+								<span></span><br>
+								<p></p>
 							</div>
 						</a>
-					</div>
+					</div>-->
 					<div class="col-md-2 col-sm-6 col-padding text-center animate-box">
 							<div class="desc">
 								<h3>TO DO</h3>
-								<span>{{ user.Todo }}<p>
+								<span>{{ i.Todo }}<p>
 							</div>
 						</a>
 					</div>
-					<!--
+
 					<div class="col-md-3 col-sm-6 col-padding text-center animate-box">
 
 							<div class="desc">
 								<h3>Soft Copy</h3>
-								<span>If Required</span><p>
-								<span>png, jpg, jpeg only</span></p>
+								<span> you can submit one or more</span><p>
+								<span>any file type</span></p>
 
 								<form action="#" method="post" enctype="multipart/form-data">
 								{% csrf_token %}
-								<p><select type='' name="number"><option value="">{{ user.AssigmentNo }}</option></select></p>
+								<p><select type='' name="number">
+									<option value="">Select this</option>
+									<option value="{{ i.id }}">{{ i.AssigmentNo }}</option></select></p>
 								<input type="file" name="designimg">
 								<input type="submit" >
 								</form>
@@ -121,7 +125,7 @@
 							</div>
 
 					</div>
-
+					<!--
 					<div class="col-md-2 col-sm-6 col-padding text-center animate-box">
 							<div class="desc">
 
@@ -132,8 +136,8 @@
 								</form>
 							</div>
 						</a>
-					</div>
-							-->
+					</div>-->
+
 					<hr style="height:2px;border-width:0;color:gray;background-color:gray">
 				</div>
 				{% endfor %}
