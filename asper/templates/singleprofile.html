@@ -8,7 +8,7 @@
     <title>Profile</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords" content="free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
-    <link rel="icon" href="{% static 'assets2/img/favicon/favicon.ico' %}">
+	<link rel="icon" href="{% static 'assets2/img/favicon/favicon.ico' %}">
     <link href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <link href="{% static 'css/profile.css' %}" rel="stylesheet">
     <link href="{% static 'css/index.css' %}" rel="stylesheet">
@@ -34,11 +34,11 @@
         window.alert = function(){};
         var defaultCSS = document.getElementById('bootstrap-css');
         function changeCSS(css){
-            if(css) $('head > link').filter(':first').replaceWith('<link rel="stylesheet" href="'+ css +'" type="text/css" />'); 
-            else $('head > link').filter(':first').replaceWith(defaultCSS); 
+            if(css) $('head > link').filter(':first').replaceWith('<link rel="stylesheet" href="'+ css +'" type="text/css" />');
+            else $('head > link').filter(':first').replaceWith(defaultCSS);
         }
         $( document ).ready(function() {
-          var iframe_height = parseInt($('html').height()); 
+          var iframe_height = parseInt($('html').height());
           window.parent.postMessage( iframe_height, 'https:https://bootsnipp.com');
         });
     </script>
@@ -58,11 +58,13 @@
 			<h3 id="fh5co-logo">Welcome</a></h3>
 			<nav id="fh5co-main-menu" role="navigation">
 				<ul> {% if request.user.is_authenticated %}
+
 					<li><img src="{{ userdata.image.url }}" alt="profile" height="130" width="130"></li>
+
 					<li>{{ request.user.first_name }} {{ request.user.last_name }}</li><br><br>
 
 					<li><a href="{% url 'Index' %}">Main Home</a></li>
-                    <li><a href="{% url 'Profile' %}">Your Profile</a></li>
+					<li><a href="{% url 'Profile' %}">Profile</a></li>
 					<li><a href="#">Blog</a></li>
 					<li><a href="{% url 'Work' %}">Work</a></li>
 					<li><a href="{% url 'Yourtask' %}">Your Task</a></li>
@@ -91,12 +93,14 @@
 
 
 			<div class="fh5co-narrow-content">
-				<h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">Profile Information of {{ data.usr.first_name  }} {{ data.usr.last_name }}</h2>
+				<h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">Profile Information</h2>
 				<div class="row">
 					<div class="col-md-1">
 						<div class="fh5co-feature animate-box" data-animate-effect="fadeInLeft">
 
 								<img src="{{ data.image.url }}" alt="profile" height="200" width="200">
+								<center><br><br>
+
 
 							<div class="fh5co-text">
 
@@ -106,12 +110,17 @@
 					<div class="col-md-4"><br>
 						<div class="fh5co-feature animate-box" data-animate-effect="fadeInLeft">
 							<div class="fh5co-text">
-								<h3>NAME : {{ data.usr.first_name  }} {{ data.usr.last_name }}</h3>
+								<h3>NAME : {{ data.usr.first_name }} {{ data.usr.last_name }}</h3>
 								<p><strong> USERID:</strong>  {{ data.usr.username }}</p>
+								<p><strong> Member Since </strong>:{{ data.JoinDate }}</p>
 								<p><strong>PHONE NUMBER:</strong> {{ data.phone }}</p>
-                                <p><strong>Email Address:</strong> {{ data.usr.email }}</p>
-                                <p><strong>Department: </strong> {{ data.dept }}</p>
-
+                                <p><strong>Department: </strong>
+									{% if data.dept != None %}
+									{{ data.dept }}.
+									{% else %}
+									 Will assign Soon! by the administrator
+									{% endif %}
+								</p>
 							</div>
 						</div>
 					</div>
@@ -123,9 +132,11 @@
 							</div>
 							<div class="fh5co-text" >
 								<h3>Expertise</h3>
-
-								<p>Comming Soon!!! </p>
-
+								{% if skill == None %}
+								<p>No Skills to Display </p>
+								{% else %}
+								<p>{{ skill.Skills }}</p>
+								{% endif %}
 
 
 							</div>
@@ -140,7 +151,7 @@
 
 
 								{% if userport == None %}
-								<a href="#"><i class="fa fa-linkedin fa-2x"></i></a>
+									<a href="#"><i class="fa fa-linkedin fa-2x"></i></a>
 									<a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a>
 									<a href="#"><i class="fa fa-instagram fa-2x"></i></a>
 									<a href="#"><i class="fa fa-twitter fa-2x"></i></a>
@@ -162,15 +173,15 @@
 				</div>
 
 			</div>
-		</div>
+			</div>
 
 
-            <div class="fh5co-narrow-content">
-				<h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">Projects Posted by {{ data.usr.first_name  }} {{ data.usr.last_name }}</h2>
+			<div class="fh5co-narrow-content">
+				<h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">Projects Posted by {{ data.usr.username }}</h2>
 				<div class="row row-bottom-padded-md">
 
                     {% for p in pdata %}
-                    {% if data.usr.username == p.usr.username %}
+					{% if data.usr.username == p.usr.username %}
 					<div class="col-md-3 col-sm-6 col-padding text-center animate-box">
 						<a href="#" class="work image-popup" style="background-image: url({{ p.ProjectImg.url }});">
 							<div class="desc">
@@ -180,12 +191,64 @@
 						</a>
 						<p>Posted by: {{ p.usr.username }}</p>
 					</div>
-                    {% else %}
-                    {% endif %}
+					{% endif %}
                     {% endfor %}
 
 				</div>
 			</div>
+
+			<div class="fh5co-narrow-content">
+				<h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">Recent Blog</h2>
+				<div class="row row-bottom-padded-md">
+					<div class="col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">
+						<div class="blog-entry">
+							<a href="#" class="blog-img"><img src="" class="img-responsive" alt=""></a>
+							<div class="desc">
+								<h3><a href="#">Inspirational Website</a></h3>
+								<span><small>by Admin </small> / <small> Web Design </small> / <small> <i class="icon-comment"></i> 14</small></span>
+								<p>Design must be functional and functionality must be translated into visual aesthetics</p>
+								<a href="#" class="lead">Read More <i class="icon-arrow-right3"></i></a>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">
+						<div class="blog-entry">
+							<a href="#" class="blog-img"><img src="" class="img-responsive" alt=""></a>
+							<div class="desc">
+								<h3><a href="#">Inspirational Website</a></h3>
+								<span><small>by Admin </small> / <small> Web Design </small> / <small> <i class="icon-comment"></i> 14</small></span>
+								<p>Design must be functional and functionality must be translated into visual aesthetics</p>
+								<a href="#" class="lead">Read More <i class="icon-arrow-right3"></i></a>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">
+						<div class="blog-entry">
+							<a href="#" class="blog-img"><img src="" class="img-responsive" alt=""></a>
+							<div class="desc">
+								<h3><a href="#">Inspirational Website</a></h3>
+								<span><small>by Admin </small> / <small> Web Design </small> / <small> <i class="icon-comment"></i> 14</small></span>
+								<p>Design must be functional and functionality must be translated into visual aesthetics</p>
+								<a href="#" class="lead">Read More <i class="icon-arrow-right3"></i></a>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">
+						<div class="blog-entry">
+							<a href="#" class="blog-img"><img src="" class="img-responsive" alt=""></a>
+							<div class="desc">
+								<h3><a href="#">Inspirational Website</a></h3>
+								<span><small>by Admin </small> / <small> Web Design </small> / <small> <i class="icon-comment"></i> 14</small></span>
+								<p>Design must be functional and functionality must be translated into visual aesthetics</p>
+								<a href="#" class="lead">Read More <i class="icon-arrow-right3"></i></a>
+							</div>
+						</div>
+					</div>
+					</div>
+			</div>
+
+
+
 
 
 
@@ -207,6 +270,13 @@
 
 
 	<!-- MAIN JS -->
-	<script src="{% static 'js/main.js' %}"></script>
+
+	<script src="{% static 'js/profile.js' %}"></script>
+
+
+
+
+
+
 </body>
 </html>

@@ -45,9 +45,6 @@
 </head>
 
 <body>
-{% if error %}
-		<h2><p style="color:red">Incorrect old password</p></h2>
-{% endif %}
 
 	<div id="fh5co-page">
 		<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
@@ -57,7 +54,10 @@
 			<nav id="fh5co-main-menu" role="navigation">
 				<ul> {% if request.user.is_authenticated %}
                     <a href="{% url 'Profile' %}">
-                        <li><img src="{{ userdata.image.url }}" alt="profile" height="130" width="130"></li></a>
+
+								<img src="{{ userdata.image.url }}" alt="profile" height="200" width="200">
+								<center><br><br>
+									</a>
 					<li>{{ request.user.first_name }} {{ request.user.last_name }}</li><br><br>
 
 					<li><a href="{% url 'Index' %}">Main Home</a></li>
@@ -89,7 +89,10 @@
 					<div class="col-md-1">
 						<div class="fh5co-feature animate-box" data-animate-effect="fadeInLeft">
 
+
 								<img src="{{ userdata.image.url }}" alt="profile" height="200" width="200">
+								<center><br><br>
+
 
 							<div class="fh5co-text">
 
@@ -225,6 +228,9 @@
 							<div class="fh5co-text">
 								<h3>Change Profiles</h3>
 
+									{% if error %}
+								<p style="color:red">Incorrect old password</p>
+								{% endif %}
 
 								<div class="list-group">
 									<form action="#" method="post" enctype="multipart/form-data">{% csrf_token %}
@@ -305,7 +311,7 @@
 
 
 	<!-- MAIN JS -->
-	<script src="{% static 'js/main.js' %}"></script>
+	<script src="{% static 'js/profile.js' %}"></script>
 
 
 

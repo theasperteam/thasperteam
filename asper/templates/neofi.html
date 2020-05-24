@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Responsive Navbar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/img/favicon/favicon.ico">
+    
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.1/assets/owl.carousel.css">
+    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+        
+    
+    <link rel="stylesheet" href="assets/css/jquery-ui.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="assets/css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    
+ </head>
+<body style="background-color: black;">
+    <nav>
+        <div class="container"><center>
+            <label class="logo">Asper</label>
+              <input type="checkbox" id="check">
+              <label for="check" class="checkbtn">
+              <p style="font-size:20px;"><img src="assets/img/menu.svg" height="25px" width="25px;"
+                                                style="padding: 1px;">
+                  Menu</p>
+      
+              </label>
+            
+            
+      
+      <ul>
+           
+<li><a href="index.html">Home</a></li>
+<li><a href="work.html">Our Work</a></li>
+<li><a href="team.html">Team</a></li>
+                            {% if request.user.is_authenticated %}
+                              <li><a href="#">{{ request.user.first_name }}</a></li>
+                              <li><a href="{% url 'logout' %}">Log Out</a></li>
+                                {% else %}
+                                <li><a href="{% url 'SignIn' %}">Login</a></li>
+                                 <li><a href="{% url 'SignUp' %}">Signup</a></li>
+                              {% endif %}
+<input type="checkbox" id="check2">
+      <label for="check" class="checkbtn2">
+        <i class="far fa-times-circle"></i>
+      </label>
+</ul>   </center>
+        </div>
+</nav>
+    
+    
+    
+    <br><br><br><br><br><br>
+    <section class="site-section" style="height: 70%;">
+
+<h1 class="heading">Neo-fi</h1>
+<br>
+
+	<div class="container">
+	<div class="row">
+		<div class="col-md-12 copy">
+			<p style="color: white; text-align: center;">Package template implements data-driven templates for generating textual output.
+
+            To generate HTML output, see package html/template, which has the same interface as this package but automatically secures HTML output against certain attacks.
+
+            
+        	</p>
+		</div>
+	</div>
+	</div><br>
+<div class="or-seperator"><b></b></div>
+<h2 style="color: white; text-align: center;"> Meet The Neo Phytes</h2>
+
+
+<section class="neofi">
+
+                  <div class="container">
+                    <div class="row justify-content-md-center">
+                      
+                      <div class="col-md-4">
+                       <div class="our-team">
+                                <img src="https://dummyimage.com/200x250/ffffff/000000.png">
+                                <div class="team-content">
+                                    <h3 class="title">Anadi Nema</h3>
+                                    <span class="post">Founder of Neo Fi and Asper</span>
+                                    <ul class="social">
+                                         <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                            <li><a href="#"><i class="fab fa-behance"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                      </div>
+                      
+                    </div>
+                    
+                  </div>
+
+
+                    <div class="row justify-content-md-center col-md-12"  style="padding-left: 3%;">
+                      
+                      <div class="col-md-2">
+                       <div class="our-team">
+                                <img src="https://dummyimage.com/200x250/ffffff/000000.png">
+                                <div class="team-content">
+                                    <h3 class="title">Anshuman Prajapati</h3>
+                                    <span class="post">Founding Member of Asper</span>
+                                    <ul class="social">
+                                            <li><a href="https://www.linkedin.com/in/anshumanprajapati/">
+                                                <i class="fab fa-linkedin"></i></a></li>
+                                            <li><a href="https://www.instagram.com/anshumanprajapati_ap/">
+                                                <i class="fab fa-instagram"></i></a></li>
+                                            <li><a href="https://www.behance.net/anshumaprajapa/">
+                                                <i class="fab fa-behance"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                      </div>
+                      <div class="col-md-2">
+                       <div class="our-team">
+                                <img src="https://dummyimage.com/200x250/ffffff/000000.png">
+                                <div class="team-content">
+                                    <h3 class="title">Saniya Zuberi</h3>
+                                    <span class="post">Founding Member of Asper</span>
+                                    <ul class="social">
+                                         <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                            <li><a href="#"><i class="fab fa-behance"></i></a></li>
+                                </div>
+                            </div>
+                      </div>
+                      <div class="col-md-2">
+                       <div class="our-team">
+                                <img src="https://dummyimage.com/200x250/ffffff/000000.png">
+                                <div class="team-content">
+                                    <h3 class="title">Bhowmika Reddy</h3>
+                                    <span class="post">Founding Member of Asper</span>
+                                    <ul class="social">
+                                         <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                            <li><a href="#"><i class="fab fa-behance"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                      </div>
+                      <div class="col-md-2">
+                       <div class="our-team">
+                                <img src="https://dummyimage.com/200x250/ffffff/000000.png">
+                                <div class="team-content">
+                                    <h3 class="title">Paridhi Dandwate</h3>
+                                    <span class="post">Founding Member of Asper</span>
+                                    <ul class="social">
+                                         <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                            <li><a href="#"><i class="fab fa-behance"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                      </div>
+                      <div class="col-md-2">
+                       <div class="our-team">
+                                <img src="https://dummyimage.com/200x250/ffffff/000000.png">
+                                <div class="team-content">
+                                    <h3 class="title">Samkit Jain</h3>
+                                    <span class="post">Founding Member of Asper</span>
+                                    <ul class="social">
+                                         <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                            <li><a href="#"><i class="fab fa-behance"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                      </div>
+                      
+                    </div>
+
+  
+        
+       
+       
+
+
+
+<br><br><br><br>
+
+    
+    
+    
+    
+    <!--footer-->
+
+<div class="fffoo">
+<footer class="mainfooter" role="contentinfo">
+  <div class="footer-middle">
+  <div class="container">
+   
+<div class="row f2f">
+    <div class="col-md-12 copy">
+      <p class="text-center">&copy; Copyright 2019 - Neo-FI.  All rights reserved.</p>
+    </div>
+  </div>
+
+
+  </div>
+  </div>
+</footer>
+
+<!--footer end-->
+</div>
+
+<!--endmain-->
+ <script src="assets/js/jquery-3.3.1.min.js"></script>
+  <script src="assets/js/jquery-ui.js"></script>
+  <script src="assets/js/popper.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/owl.carousel.min.js"></script>
+  <script src="assets/js/jquery.countdown.min.js"></script>
+  <script src="assets/js/jquery.easing.1.3.js"></script>
+  <script src="assets/js/aos.js"></script>
+  <script src="assets/js/jquery.fancybox.min.js"></script>
+  <script src="assets/js/jquery.sticky.js"></script>
+  <script src="assets/js/main.js"></script>
+                        
+      
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
