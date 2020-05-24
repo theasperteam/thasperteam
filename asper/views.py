@@ -16,7 +16,7 @@ def Team(request):
     return render(request, 'team.html')
 
 def Pillar(request):
-    return render(request, 'founding.html')
+    return render(request, 'neofi.html')
 
 
 def Profile(request):
@@ -47,7 +47,7 @@ def EditProfile(request):
     skdata = UserSkills.objects.filter(usr=request.user).first()
     up = UserPort.objects.filter(usr=request.user).first()
     pdata = Project.objects.all()
-    error=False
+    error = False
 
     if request.method == "POST":
         if 'img' in request.FILES:
@@ -61,7 +61,6 @@ def EditProfile(request):
             userdata.save()
             return redirect('EditProfile')
         elif 'projectname' in request.POST:
-
             Projectname = request.POST['projectname']
             Profiletitle = request.POST['projecttype']
             projectimg = request.FILES['projectimg']
@@ -69,7 +68,6 @@ def EditProfile(request):
             return redirect('EditProfile')
 
         elif 'skill' in request.POST:
-
             sk = request.POST['skill']
             UserSkills.objects.update(usr=request.user, Skills=sk)
             return redirect('EditProfile')
@@ -94,25 +92,23 @@ def EditProfile(request):
             linkedin = request.POST['Github']
             UserPort.objects.update(usr=request.user, Github=linkedin)
             return redirect('EditProfile')
+
         elif 'old' in request.POST:
             o = request.POST['old']
             n = request.POST['new']
-            data = authenticate(username=request.user.username, password=o)
+            data = authenticate(usr=request.user.username, pas=o)
             if data:
                 data.set_password(n)
                 data.save()
                 Logout(request)
-                SignUp(request, data)
-                return redirect('Profile')
+                return SignIn(data)
+
             else:
                 error = True
-
         else:
             return redirect('EditProfile')
 
-
-
-    dis =  {'userdata': userdata, 'first':first,  'skill':skdata, 'userport':up, 'error':error, 'pdata':pdata}
+    dis = {'userdata': userdata, 'first': first,  'skill': skdata, 'userport': up, 'error': error, 'pdata': pdata}
     return render(request, 'profile_edit.html', dis)
 
 
@@ -130,11 +126,13 @@ def SignIn(request):
         else:
             error = True
     d = {"error": error}
-    return render(request, 'signin.html', d)
+    return render(request, 'login.html', d)
+
 
 def SignUp(request):
     error = False
     perror = False
+    register = False
     if request.method == 'POST':
         dd = request.POST
         u = dd['username']
@@ -143,22 +141,22 @@ def SignUp(request):
         e = dd['email']
         p = dd['password']
         p1 = dd['password1']
-        phone = dd['Phone']
+        i = 'https://nichemodels.co/wp-content/uploads/2019/03/user-dummy-pic.png'
         td = date.today()
-        i = request.FILES['img']
+
         udata = User.objects.filter(username=u)
         if udata:
             error = True
         elif p1 != p:
             perror = True
         else:
+            register = True
             user = User.objects.create_user(username=u, password=p, email=e, first_name=fn, last_name=ln)
-            UserDetail.objects.create(usr=user, image=i, phone=phone, EmailA=e, FirstN=fn, LastN=ln, JoinDate=td)
+            UserDetail.objects.create(usr=user, image=i, EmailA=e, FirstN=fn, LastN=ln, JoinDate=td)
             UserSkills.objects.create(usr=user)
             UserPort.objects.create(usr=user, FirstN=fn, LastN=ln)
 
-            return redirect('SignIn')
-    d = {"error": error, 'perror': perror}
+    d = {"error": error, 'perror': perror, 'register': register}
     return render(request, 'signup.html', d)
 
 def Logout(request):
@@ -189,19 +187,20 @@ def AllProfile(request):
 
     adata= UserDetail.objects.filter(usr=request.user).first()
     udata = UserDetail.objects.all()
-    return render(request, 'all_profile.html', {'udata':udata, 'adata':adata})
+    return render(request, 'allprofile.html', {'udata':udata, 'adata':adata})
 
 def Work(request):
     if request.user.is_authenticated:
         userdata = UserDetail.objects.filter(usr=request.user).first()
         pdata = Project.objects.all()
+
         d = {'userdata': userdata, 'project': pdata}
 
     else:
         pdata = Project.objects.all()
         d = {'project':pdata}
 
-    return render(request, 'work.html',d)
+    return render(request, 'yourwork.html',d)
 
 def Yourtask(request):
 
@@ -256,20 +255,15 @@ def Yourtask(request):
                 AppSubmit.objects.update(usr=request.user, Status='True')
                 return redirect('Yourtask')
 
+    return render(request, 'task.html',{'userdata':userdata, 'assi':assi, 'design':design,})
 
 
-    return render(request, 'youtask.html',{'userdata':userdata, 'assi':assi, 'design':design,})
-
-
-def SingleProfile(request,pid):
+def SingleProfile(request, pid):
     data = UserDetail.objects.get(id=pid)
     userdata = UserDetail.objects.filter(usr=request.user).first()
     skdata = UserSkills.objects.filter(usr=request.user).first()
     up = UserPort.objects.filter(usr=request.user).first()
     pdata = Project.objects.all()
-
-
-
-    spdata = {'userdata': userdata,'skill':skdata, 'userport':up,"data": data, 'pdata':pdata}
+    spdata = {'userdata': userdata,'skill':skdata, 'userport':up, 'data': data, 'pdata':pdata}
     return render(request, 'singleprofile.html', spdata)
 

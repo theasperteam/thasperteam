@@ -1,158 +1,169 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
-  <meta charset="utf-8">
-  <title>Asper</title>
-  <meta name="description" content="particles.js is a lightweight JavaScript library for creating particles.">
-  <meta name="author" content="Vincent Garreau" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="icon" href="{% static 'assets2/img/favicon/favicon.ico' %}">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.1/assets/owl.carousel.css">
-  <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+    <meta charset="utf-8">
+    <title>ASPER</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{% static 'img/favicon/favicon.ico' %}">
+    
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.1/assets/owl.carousel.css">
+    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>  
 
-
-   <link rel="stylesheet" media="screen" href="{% static 'assets2/css/morestyle.css' %}">
-    <link rel="stylesheet" href="{% static 'assets2/tempcss/jquery-ui.css' %}">
-    <link rel="stylesheet" href="{% static 'assets2/tempcss/owl.carousel.min.css' %}">
-    <link rel="stylesheet" href="{% static 'assets2/tempcss/owl.theme.default.min.css' %}">
-
-    <link rel="stylesheet" href="{% static 'assets2/tempcss/jquery.fancybox.min.css' %}">
-</head>
+    <link rel="stylesheet" href="{% static 'css/jquery-ui.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/jquery.fancybox.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    
+   
+    
+     <script>$(function () {
+            $(window).on('scroll', function () {
+                if ( $(window).scrollTop() > 10 ) {
+                    $('.navbar').addClass('active');
+                } else {
+                    $('.navbar').removeClass('active');
+                }
+            });
+        });
+        </script>
+    
+    
+    
+ </head>
 <body>
+    <nav>
+        <div class="container"><center>
+            <label class="animate__animated animate__flip logo">Asper</label>
+              <input type="checkbox" id="check">
+              <label for="check" class="checkbtn">
+                  
+                <p style="font-size:20px;"><img src="{% static 'img/menu.svg' %}" height="25px" width="25px;"
+                                                style="padding: 1px;">
+                  Menu</p>
+              </label>
+                
+            
+
+            
+      
+      <ul>
+           
+<li><a class="active" href="#">Home</a></li>
+<li><a href="{% url 'Work' %}">Our Work</a></li>
+<li><a href="{% url 'Team' %}">Team</a></li>
 
 
 
-<!-- particles.js container -->
-<div id="particles-js">
-  <div class="home">
-
-
-
-
-    <div class="mynav">
-     <header class="header">
-            <div class="container">
-            <a href="" class="logo">Asper</a>
-            <input class="menu-btn" type="checkbox" id="menu-btn" />
-            <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
-            <ul class="menu">
-
-              <li><a href="{% url 'Work' %}">Our Work</a></li>
-               {% if request.user.is_authenticated %}
-                           <li><a href="{% url 'Profile' %}">{{ request.user.first_name }}</a></li>
-                           <li><a href="{% url 'logout' %}">Log Out</a></li>
-                              {% else %}
-                              <li><a href="{% url 'SignIn' %}">Login</a></li>
-                              <li><a href="{% url 'SignUp' %}">Sign Up</a></li>
+                              {% if request.user.is_authenticated %}
+                              <li><a href="{% url 'Profile' %}">{{ request.user.first_name }}</a></li>
+                              <li><a href="{% url 'logout' %}">Log Out</a></li>
+                                {% else %}
+                                <li><a href="{% url 'SignIn' %}">Login</a></li>
+                                 <li><a href="{% url 'SignUp' %}">Signup</a></li>
                               {% endif %}
-            </ul>
-          </div>
-      </header>
-    </div>
+
+<input type="checkbox" id="check2">
+        <label for="check" class="checkbtn2">
+             <i class="far fa-times-circle"></i>
+        </label>
+     
 
 
-
-
-    <section class="site-section">
-      <div class="site-blocks-cover overlay" style="background-image: url();" data-aos="fade" id="home-section">
-
-
-      <div class="container">
-        <div class="row align-items-center justify-content-center">
-
-
-          <div class="col-md-10 mt-lg-5 mb-7 text-center">
-            <div class="single-text owl-carousel">
-              <div class="slide">
-                <h1 class="text-uppercase" data-aos="fade-up">Solutions1</h1>
-                <p class="mb-5 desc"  data-aos="fade-up" data-aos-delay="100">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident cupiditate suscipit, magnam libero velit esse sapiente officia inventore!</p>
-                <div data-aos="fade-up" data-aos-delay="100">
-                </div>
-              </div>
-
-              <div class="slide">
-                <h1 class="text-uppercase" data-aos="fade-up">Solutions</h1>
-                <p class="mb-5 desc"  data-aos="fade-up" data-aos-delay="100">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident cupiditate suscipit, magnam libero velit esse sapiente officia inventore!</p>
-              </div>
-
-              <div class="slide">
-                <h1 class="text-uppercase" data-aos="fade-up">Solutions</h1>
-                <p class="mb-5 desc"  data-aos="fade-up" data-aos-delay="100">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident cupiditate suscipit, magnam libero velit esse sapiente officia inventore!</p>
-              </div>
-
-            </div>
-          </div>
-
+</ul>   </center>
         </div>
-      </div>
-
-      <a href="#next" class="mouse smoothscroll">
-        <span class="mouse-icon">
-          <span class="mouse-wheel"></span>
-        </span>
-      </a>
+</nav>
+    
+    <section class="head">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2 mt-lg-7 mb-4">
+    
+            </div>
+             
+            <div class="col-md-8 mt-lg-7 mb-4">
+          
+            <h2 class="animate__animated animate__fadeInRight text-header">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                </h2>
+            </div>
+            
+        </div>
+            <center><br><br><bR><br><br><br><br><br><br>
+                 <a href="#next" class="headerdown"><i class="fa fa-angle-double-down fa-5x" aria-hidden="true"></i></a>
+             </center>
+       
     </div>
     </section>
-
-
-
-   <!-- The social media icon bar -->
-   <section class="aboutcover">
-   <div class="about" id="next">
+        
+       
+        
+        
+        
+        
+        
+        
+        <br><br><br>
+    <!--about -->
+     <section class="aboutcover">
+    <div class="about" id="next">
    <center>
-     <h2 class="section-title mb-3">About Us</h2>
+     <h2 class="animate__animated animate__pulse heading mb-3">About Us</h2>
    </center>
-
-
+      
+    
           <div class="container"><br>
-            <div class="row">
-              <div class="col-md-8 col-sm-12"><p> Package template implements data-driven templates for generating textual output.
+            <div class="row about-text">
+              <div class="animate__animated animate__pulse col-md-7 col-sm-6" style="text-align: justify;"><p> Package template implements data-driven templates for generating textual output.
 
-                To generate HTML output, see package html/template, which has the same interface as this package but automatically secures HTML output against certain attacks.</p>
-                <p>
-                Templates are executed by applying them to a data structure. Annotations in the template refer to elements of the data structure (typically a field of a struct or a key in a map) to control execution and derive values to be displayed. Execution of the template walks the structure and sets the cursor, represented by a period '.' and called "dot", to the value at the current location in the structure as execution proceeds.</p>
-                <p>
+                To generate HTML output, see package html/template, which has the same interface as this package but automatically secures HTML output against certain attacks.
+               
+                Templates are executed by applying them to a data structure. Annotations in the template refer to elements of the data structure (typically a field of a struct or a key in a map) to control execution and derive values to be displayed. Execution of the template walks the structure and sets the cursor, represented by a period '.' and called "dot", to the value at the current location in the structure as execution proceeds.
+               
                 The input text for a template is UTF-8-encoded text in any format. "Actions"--data evaluations or control structures--are delimited by "{{" and "}}"; all text outside actions is copied to the output unchanged. Except for raw strings, actions may not span newlines, although comments can.
               </p><p>
                 Once parsed, a template may be executed safely in parallel, although if parallel executions share a Writer the output may be interleaved. </p>
-
+                
                 </div>
                 <div class="col-md-1"></div>
-              <div class="col-md-3 col-sm-3"><img class="col-sm" src="{% static 'assets2/img/logo/main.png' %}" alt=""><br><br><br><center>
-                <p><button type="button" class="btn btn-primary btn-sm"><a href="{% url 'Team' %}">Team</a></button></p>
+              <div class="col-md-3 col-sm-3"><img class="col-sm" src="{% static 'img/logo/main.png' %}" alt=""><br><br><br><center>
+                <p><button type="button" class="btn btn-dark btn-lg" style="border-radius: 100px; width: 150px;"><a href="team.html" style="text-align: center; color: white;">Team</a></button></p>
               </center>
-
+                
               </div>
             </div>
           </div>
     </div>
-  </section>
-
-
-
-
-
-    <section class="site-section work">
+    </section>
+      
+<!--projects-->
+        
+    <section class="work">
+    
+      <div class="workmargin">
       <div class="container">
 
         <div class="row mb-5 justify-content-center">
           <div class="col-md-7 text-center">
-            <h2 class="section-title mb-3" data-aos="fade-up" data-aos-delay="">Projects</h2>
-            <p class="lead" data-aos="fade-up" data-aos-delay="100">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident cupiditate suscipit, magnam libero velit esse sapiente officia inventore!</p>
+            <h2 class="heading" >Projects</h2>
+            <h6 style="font-weight: 300; text-align: justify-all;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident cupiditate suscipit, magnam libero velit esse sapiente officia inventore!</h6>
           </div>
         </div>
-
+        
         <div class="row align-items-lg-center" >
           <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
 
             <div class="owl-carousel slide-one-item-alt">
-              <img src="https://i.pinimg.com/564x/b1/f7/b8/b1f7b84ff82dbf4dda4a23923abf4a21.jpg" alt="Image" class="img-fluid">
-              <img src="https://i.pinimg.com/564x/f5/d4/c5/f5d4c565565313be70b25410a8dd99c3.jpg" alt="Image" class="img-fluid">
-              <img src="https://i.pinimg.com/236x/e1/77/0b/e1770beca108813a925e822402405b29.jpg" alt="Image" class="img-fluid">
+              <img src="https://dummyimage.com/580x400/000/fff" alt="Image" class="img-fluid">
+              <img src="https://dummyimage.com/580x400/000/fff" alt="Image" class="img-fluid">
+              <img src="https://dummyimage.com/580x400/000/fff" alt="Image" class="img-fluid">
             </div>
             <div class="custom-direction">
               <a href="#" class="custom-prev"><span><span class="icon-keyboard_backspace"></span></span></a><a href="#" class="custom-next"><span><span class="icon-keyboard_backspace"></span></span></a>
@@ -160,125 +171,128 @@
 
           </div>
           <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
-
+            
             <div class="owl-carousel slide-one-item-alt-text">
               <div>
-                <h2 class="section-title mb-3">01. </h2>
-                <p>This is the logo designing project for 'TRITAAL'</p>
-                  <p>TriTaal is a bengali traditional retro band which remakes retro songs and presents them in the most uncommon manner while retaining the gist of the song.
-                      TriTaal believes in transcending musical boundaries and giving it a new touch by emulating traditional folklores of Bengal in a way that gets you hooked to the songs.</p>
+                <h2 class="section-title mb-3" style="font-weight: 500; text-align: justify;">01. </h2>
+                <p style="font-weight: 300; text-align: justify-all;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident cupiditate suscipit, magnam libero velit esse sapiente officia inventore!</p>
 
-
+                
               </div>
               <div>
-                <h2 class="section-title mb-3">02. </h2>
-                <p>Logo design for 'Vocal Heart' Infotech Pvt. Ltd. - Vocal Heart is a📍Bhopal based company offering BPO Services, Database,
-                    Back Office, Internet Marketing & Technical Support Services👩🏻‍💻👨🏻‍💻 - Did you like the design? Comment below your favourite logo or do tell your views about this one</p>
-
+                <h2 class="section-title mb-3" style="font-weight: 500; text-align: justify;">02. </h2>
+                <p style="font-weight: 300; text-align: justify-all;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident cupiditate suscipit, magnam libero velit esse sapiente officia inventore!</p>
+                
               </div>
               <div>
-                <h2 class="section-title mb-3">03.</h2>
-                <p>'TRITAAL' - TriTaal is a traditional Bengali retro-music band, that recreates retro songs, and presents them in the most uncommon fashion, whilst preserving their true essence🎶</p>
+                <h2 class="section-title mb-3" style="font-weight: 500; text-align: justify;">03.</h2>
+                <p style="font-weight: 300; text-align: justify-all;">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
 
-
+               
               </div>
-
+              
             </div>
-
+            
           </div>
         </div>
       </div>
-    </section>
+    </div>
+    
+  </section>
+<!--projectsend-->
+    
 
+        <!--Testimonials-->    
+        <section class="site-section testimonial-wrap" id="testimonials-section" data-aos="fade">
+              <div class="testii">
+              <div class="container">
+                <div class="row mb-5">
+                  <div class="col-12 text-center">
+                    <h2 class="heading mb-3" style="color: black;">Happy Clients</h2>           
+                  </div>
+                </div>
+              </div><br>
+              <div class="slide-one-item home-slider owl-carousel">
+                  <div>
+                    <div class="testimonial">
+                      <center>
+                        <blockquote class="col-lg-6 mb-7">
+                        <p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
+                      </blockquote>      
+                        <figure class="mb-4 d-flex align-items-center justify-content-center">
+                        <div><div class="col-md-3 col-sm-5"><img class="col-sm w-50 img-fluid mb-3" src="{% static 'img/logo/main.png' %}" alt="Image"></div>
+                      </div>
+                      </figure>
+                       </center>
+                       <center>
+                         <p>Name</p>
+                       </center>
 
+                    </div>
+                  </div>
+                  <div>
+                    <div class="testimonial">
+                      <center>
+                        <blockquote class="col-lg-6 mb-7">
+                        <p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
+                      </blockquote>      
+                        <figure class="mb-4 d-flex align-items-center justify-content-center">
+                        <div><div class="col-md-3 col-sm-5"><img class="col-sm w-50 img-fluid mb-3" src="{% static 'img/logo/main.png' %}" alt="Image"></div>
+                      </div>
+                      </figure>
+                       </center>
+                       <center>
+                         <p>Name</p>
+                       </center>
 
-    <section class="site-section testimonial-wrap" id="testimonials-section" data-aos="fade">
-      <div class="testii">
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-12 text-center">
-            <h2 class="section-title mb-3">Happy Clients</h2>
-          </div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <div class="testimonial">
+                      <center>
+                        <blockquote class="col-lg-6 mb-7">
+                        <p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
+                      </blockquote>      
+                        <figure class="mb-4 d-flex align-items-center justify-content-center">
+                        <div><div class="col-md-3 col-sm-5"><img class="col-sm w-50 img-fluid mb-3" src="{% static 'img/logo/main.png' %}" alt="Image"></div>
+                      </div>
+                      </figure>
+                       </center>
+                       <center>
+                         <p>Name</p>
+                       </center>
+
+                    </div>
+                  </div>
+
+                  <div>
+                    <div class="testimonial">
+                      <center>
+                        <blockquote class="col-lg-6 mb-7">
+                        <p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
+                      </blockquote>      
+                        <figure class="mb-4 d-flex align-items-center justify-content-center">
+                        <div><div class="col-md-3 col-sm-5"><img class="col-sm w-50 img-fluid mb-3" src="{% static 'img/logo/main.png' %}" alt="Image"></div>
+                      </div>
+                      </figure>
+                       </center>
+                       <center>
+                         <p>Name</p>
+                       </center>
+
+                    </div>
+                  </div>
         </div>
-      </div><br>
-      <div class="slide-one-item home-slider owl-carousel">
-          <div>
-            <div class="testimonial">
-              <center>
-                <blockquote class="col-lg-6 mb-7">
-                <p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
-              </blockquote>
-                <figure class="mb-4 d-flex align-items-center justify-content-center">
-                <div><div class="col-md-3 col-sm-5"><img class="col-sm w-50 img-fluid mb-3" src="{% static 'assets2/img/logo/main.png' %}" alt="Image"></div>
-              </div>
-              </figure>
-               </center>
-               <center>
-                 <p>Name</p>
-               </center>
-
-            </div>
-          </div>
-          <div>
-            <div class="testimonial">
-              <center>
-                <blockquote class="col-lg-6 mb-7">
-                <p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
-              </blockquote>
-                <figure class="mb-4 d-flex align-items-center justify-content-center">
-                <div><div class="col-md-3 col-sm-5"><img class="col-sm w-50 img-fluid mb-3" src="{% static 'assets2/img/logo/main.png' %}" alt="Image"></div>
-              </div>
-              </figure>
-               </center>
-               <center>
-                 <p>Name</p>
-               </center>
-
-            </div>
-          </div>
-
-          <div>
-            <div class="testimonial">
-              <center>
-                <blockquote class="col-lg-6 mb-7">
-                <p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
-              </blockquote>
-                <figure class="mb-4 d-flex align-items-center justify-content-center">
-                <div><div class="col-md-3 col-sm-5"><img class="col-sm w-50 img-fluid mb-3" src="{% static 'assets2/img/logo/main.png' %}" alt="Image"></div>
-              </div>
-              </figure>
-               </center>
-               <center>
-                 <p>Name</p>
-               </center>
-
-            </div>
-          </div>
-
-          <div>
-            <div class="testimonial">
-              <center>
-                <blockquote class="col-lg-6 mb-7">
-                <p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
-              </blockquote>
-                <figure class="mb-4 d-flex align-items-center justify-content-center">
-                <div><div class="col-md-3 col-sm-5"><img class="col-sm w-50 img-fluid mb-3" src="{% static 'assets2/img/logo/main.png' %}" alt="Image"></div>
-              </div>
-              </figure>
-               </center>
-               <center>
-                 <p>Name</p>
-               </center>
-
-            </div>
-          </div>
-      </div>
-    </section>
-
-
-
-<div class="or-seperator"><b></b></div>
-<div class="fffoo">
+        </section>
+        <!--End end-->
+        
+        
+    
+    
+<!--footer-->
+<br><Br><br>
+<div class="animate__animated animate__slideInUp fffoo">
 <footer class="mainfooter" role="contentinfo">
   <div class="footer-middle">
   <div class="container">
@@ -287,7 +301,7 @@
         <!--Column1-->
         <div class="footer-pad">
           <h4>Heading 1</h4>
-          <ul class="list-unstyled">
+          <ul class="">
             <li><a href="#"></a></li>
             <li><a href="#">Payment Center</a></li>
             <li><a href="#">Contact Directory</a></li>
@@ -330,14 +344,15 @@
       <div class="col-md-3">
         <h4>Follow Us</h4>
             <ul class="social-network social-circle">
-             <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-             <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
-              <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-             <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
-            </ul>
+             <li><a href="#" class="icoFacebook" title="Facebook"><i class="fab fa-facebook-f"></i>  Facebook</a></li>
+             <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fab fa-linkedin"></i>  LinkedIn</a></li>
+              <li><a href="#" class="icoFacebook" title="Twitterk"><i class="fab fa-twitter"></i>  Twitter</a></li>
+             <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fab fa-instagram"></i>  Instagram</a></li>
+            </ul>       
     </div>
     </div>
-  <div class="row">
+  
+<div class="row f2f">
     <div class="col-md-12 copy">
       <p class="text-center">&copy; Copyright 2020 - Asper.  All rights reserved.</p>
     </div>
@@ -347,45 +362,29 @@
   </div>
   </div>
 </footer>
-</div>
+
 <!--footer end-->
-
-
-
-
-
-  </div>
 </div>
 
-<!-- scripts -->
-<!--<script src="{% static 'assets2/js/main.js' %}"></script>-->
-<script src="{% static 'assets2/js/particles.js' %}"></script>
-<script src="{% static 'assets2/js/app.js' %}"></script>
-<script src="{% static 'assets2/js/lib/stats.js' %}"></script>
+<!--endmain-->
+ <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+  <script src="{% static 'js/jquery-ui.js' %}"></script>
+  <script src="{% static 'js/popper.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'js/jquery.countdown.min.js' %}"></script>
+  <script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+  <script src="{% static 'js/aos.js' %}"></script>
+  <script src="{% static 'js/jquery.fancybox.min.js' %}"></script>
+  <script src="{% static 'js/jquery.sticky.js' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
+  <script src="{% static 'js/main1.js' %}"></script>
+            
 
 
-<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-
-
-
-
-<script src="{% static 'assets2/tempjs/jquery.countdown.min.js' %}"></script>
-<script src="{% static 'assets2/tempjs/jquery.easing.1.3.js' %}"></script>
-<script src="{% static 'assets2/tempjs/jquery-3.3.1.min.js' %}"></script>
-<script src="{% static 'assets2/tempjs/jquery-ui.js' %}"></script>
-<script src="{% static 'assets2/tempjs/popper.min.js' %}"></script>
-<script src="{% static 'assets2/tempjs/bootstrap.min.js' %}"></script>
-<script src="{% static 'assets2/tempjs/owl.carousel.min.js' %}"></script>
-<script src="{% static 'assets2/tempjs/aos.js' %}"></script>
-<script src="{% static 'assets2/tempjs/jquery.fancybox.min.js' %}"></script>
-<script src="{% static 'assets2/tempjs/jquery.sticky.js' %}"></script>
-<script src="{% static 'assets2/tempjs/main.js' %}"></script>
-
-</body>
+      
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
 </html>

@@ -34,11 +34,11 @@
         window.alert = function(){};
         var defaultCSS = document.getElementById('bootstrap-css');
         function changeCSS(css){
-            if(css) $('head > link').filter(':first').replaceWith('<link rel="stylesheet" href="'+ css +'" type="text/css" />'); 
-            else $('head > link').filter(':first').replaceWith(defaultCSS); 
+            if(css) $('head > link').filter(':first').replaceWith('<link rel="stylesheet" href="'+ css +'" type="text/css" />');
+            else $('head > link').filter(':first').replaceWith(defaultCSS);
         }
         $( document ).ready(function() {
-          var iframe_height = parseInt($('html').height()); 
+          var iframe_height = parseInt($('html').height());
           window.parent.postMessage( iframe_height, 'https:https://bootsnipp.com');
         });
     </script>
@@ -58,7 +58,9 @@
 			<h3 id="fh5co-logo">Welcome</a></h3>
 			<nav id="fh5co-main-menu" role="navigation">
 				<ul> {% if request.user.is_authenticated %}
+
 					<li><img src="{{ userdata.image.url }}" alt="profile" height="130" width="130"></li>
+
 					<li>{{ request.user.first_name }} {{ request.user.last_name }}</li><br><br>
 
 					<li><a href="{% url 'Index' %}">Main Home</a></li>
@@ -97,6 +99,7 @@
 
 								<img src="{{ userdata.image.url }}" alt="profile" height="200" width="200">
 								<center><br><br>
+
 									<a href="{% url 'EditProfile' %}">Edit Profile</a></center>
 							<div class="fh5co-text">
 
@@ -261,7 +264,7 @@
 								<span>{{ p.ProjectType }}</span>
 							</div>
 						</a>
-						<p>Posted by: {{ p.usr.username }}</p>
+						<p>Posted by: You</p>
 					</div>
 					{% endif %}
                     {% endfor %}
@@ -274,7 +277,7 @@
 				<div class="row row-bottom-padded-md">
 					<div class="col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">
 						<div class="blog-entry">
-							<a href="#" class="blog-img"><img src="{{ userdata.image.url }}" class="img-responsive" alt=""></a>
+							<a href="#" class="blog-img"><img src="" class="img-responsive" alt=""></a>
 							<div class="desc">
 								<h3><a href="#">Inspirational Website</a></h3>
 								<span><small>by Admin </small> / <small> Web Design </small> / <small> <i class="icon-comment"></i> 14</small></span>
@@ -285,7 +288,7 @@
 					</div>
 					<div class="col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">
 						<div class="blog-entry">
-							<a href="#" class="blog-img"><img src="{{ userdata.image.url }}" class="img-responsive" alt=""></a>
+							<a href="#" class="blog-img"><img src="" class="img-responsive" alt=""></a>
 							<div class="desc">
 								<h3><a href="#">Inspirational Website</a></h3>
 								<span><small>by Admin </small> / <small> Web Design </small> / <small> <i class="icon-comment"></i> 14</small></span>
@@ -296,7 +299,7 @@
 					</div>
 					<div class="col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">
 						<div class="blog-entry">
-							<a href="#" class="blog-img"><img src="{{ userdata.image.url }}" class="img-responsive" alt=""></a>
+							<a href="#" class="blog-img"><img src="" class="img-responsive" alt=""></a>
 							<div class="desc">
 								<h3><a href="#">Inspirational Website</a></h3>
 								<span><small>by Admin </small> / <small> Web Design </small> / <small> <i class="icon-comment"></i> 14</small></span>
@@ -307,7 +310,7 @@
 					</div>
 					<div class="col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">
 						<div class="blog-entry">
-							<a href="#" class="blog-img"><img src="{{ userdata.image.url }}" class="img-responsive" alt=""></a>
+							<a href="#" class="blog-img"><img src="" class="img-responsive" alt=""></a>
 							<div class="desc">
 								<h3><a href="#">Inspirational Website</a></h3>
 								<span><small>by Admin </small> / <small> Web Design </small> / <small> <i class="icon-comment"></i> 14</small></span>
@@ -342,7 +345,8 @@
 
 
 	<!-- MAIN JS -->
-	<script src="{% static 'js/main.js' %}"></script>
+
+	<script src="{% static 'js/profile.js' %}"></script>
 
 
 
