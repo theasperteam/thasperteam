@@ -86,7 +86,9 @@ a.active,a:hover{
     box-shadow: rgb(255 255 255 0.7);
     
 }
-
+.checkbtn2{
+display:none;
+}
 
 #check2{
    
@@ -99,7 +101,8 @@ a.active,a:hover{
   display: none;
    
 }
-@media (max-width: 1052px){
+
+@media (max-width: 752px){
   label.logo{
     font-size: 27px;
     padding-left: 25px;
@@ -107,12 +110,15 @@ a.active,a:hover{
   nav ul li a{
     font-size: 16px;
   }
-    
+
+    .checkbtn2{
+display:none;
+}
     
    
     
 }
-@media (max-width: 1058px){
+@media (max-width: 768px){
   .checkbtn{
     display: block;
     margin-right: 40px;
@@ -239,12 +245,11 @@ font-family: 'pasajero', sans-serif;
   color: white;}
 
 .mainfooter{
-  padding-top: 50px;
+
  
 }
 .f2f{
-  padding-top: 20px;
-    padding-bottom: 60px;
+
   width: 100%;
   
 }
@@ -435,11 +440,16 @@ font-family: 'pasajero', sans-serif;
     box-shadow: 0 0 0 5px rgba(255,255,255,0.3);
     color: #fff;
 }
-@media only screen and (max-width: 990px){
-    .our-team{ margin-bottom: 30px; }
-}
+
 
 /*signin*/
+
+
+
+
+
+
+
 /* signin */
 
 

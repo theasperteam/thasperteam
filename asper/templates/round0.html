@@ -1,0 +1,110 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="utf-8">
+    <title>Registration</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{% static 'img/favicon/favicon.ico' %}">
+
+ <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'registration-static/css/main.css' %}">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+<body>
+
+<div class="row">
+  <section class="section">
+      <div class="container">
+
+    <header>
+      <h3>Register</h3>
+      <h4>Please fill your information below</h4>
+
+    </header>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+          <div class="box">
+                <form action="#" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <br><Br>
+                        {% if error %}
+                        <p style="color:red;">Already Registered</p>
+                    <br><Br>
+                        {% endif %}
+                    {% if register == True %}
+                    <br><Br>
+                        <p style="color:green">Registered!</p>
+                    <br><Br>
+                        {% endif %}
+
+
+                <div class="input-container">
+                    <input type="text" required="" name="Q1" autofocus/>
+                    <label>Full Name</label>
+                </div>
+                <div class="input-container">
+                    <input type="email" name="Q2" required=""/>
+                    <label>Email</label>
+                </div>
+
+                <div class="input-container">
+                    <input type="text" name="Q3" required=""/>
+                    <label>Phone No.</label>
+                </div>
+                <div class="input-container">
+                    <input type="text" name="Q4" required=""/>
+                    <label>Enrollment Number</label>
+                </div>
+                <div class="input-container">
+                    <input type="text" name="Q5" required=""/>
+                    <label>Academic department</label>
+                </div>
+                    <div class="input-container">
+                    <input type="text" name="Q6" required=""/>
+                    <label>What do you know about Asper?</label>
+                </div>
+                <div class="input-container">
+                    <input type="text" name="Q7" required=""/>
+                    <label>Give a brief about your skillset.</label>
+                </div>
+
+                <div class="input-container">
+                    <input type="text" name="Q8" required=""/>
+                    <label>You are interested to learn.</label>
+                </div>
+
+                    <div class="input-container">
+                    <input type="text" name="Q9" required=""/>
+                    <label>Configuration of your system</label>
+                </div>
+                <div class="input-container">
+                    <input type="text" name="Q10" required=""/>
+                    <label>Link of your LinkedIn Profile</label>
+                </div>
+
+                    <center>
+                        <button type="submit" class="submit">Submit</button>
+                    </center>
+
+
+            </form>
+            </div>
+
+
+    <i class="wave"></i>
+          </div>
+  </section>
+    </div>
+
+
+
+<script src="{% static 'registration-static/js/main.js' %}"></script>
+<script src="{% static 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js' %}"></script>
+
+
+
+</body>
+</html>

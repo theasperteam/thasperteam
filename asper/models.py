@@ -38,9 +38,7 @@ class UserPort(models.Model):
 
 
 class FirstTask(models.Model):
-    usr = models.ForeignKey(User,on_delete=models.CASCADE,null=True)
-    FirstTS = models.DateField(null=True)
-    ud = models.TextField(max_length=100, null=True)
+    usr = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
     Q1 = models.TextField(max_length=100, null=True)
     Q2 = models.TextField(max_length=100, null=True)
     Q3 = models.TextField(max_length=100, null=True)
@@ -49,6 +47,8 @@ class FirstTask(models.Model):
     Q6 = models.TextField(max_length=100, null=True)
     Q7 = models.TextField(max_length=100, null=True)
     Q8 = models.TextField(max_length=100, null=True)
+    Q9 = models.TextField(max_length=100, null=True)
+    Q10 = models.TextField(max_length=100, null=True)
 
     def __str__(self):
         return self.usr.username
