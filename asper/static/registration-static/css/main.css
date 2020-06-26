@@ -1,0 +1,227 @@
+@import url('font-family: 'Poppins', sans-serif;');
+
+
+
+html {
+    font-size: 10px;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+body {
+    font-family: 'poppins', sans-serif;
+    font-size: 16px;
+    line-height: 1.428571429;
+    background-image: url(https://cdn.pixabay.com/photo/2017/03/05/21/43/planet-2120004_960_720.jpg);
+    background-blend-mode: darken;
+    background-size: cover;
+    background-color: #ff151f;
+    
+    position: fixed center;
+    
+    color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 1.5rem;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.section{
+    
+    background-color: rgba(0,0,0,0.5);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 550px;
+}
+header,
+main,
+footer{
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+header{
+    padding: 48px;
+    @media (max-width: 440px){
+        padding: 48px 24px;
+    }
+    >h3{
+        font-size: 34px;
+        
+        margin-bottom: 8px;
+    }
+    >h4{
+        font-size: 18px;
+        
+        letter-spacing: 1px;
+    }
+}
+main{
+    flex: 1;
+    padding: 0 48px;
+    @media (max-width: 440px){
+        padding: 0 24px;
+    }
+}
+footer{
+    width: 100%;
+    background-color: #0fff0;
+    padding: 16px;
+    align-self: center;
+    text-align: center;
+    margin-top: 32px;
+    a{
+        color: #fff;
+        font-weight: 700;
+        text-decoration: none;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}
+
+
+
+.submit{
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 8px 48px;
+    margin-top: 32px;
+    color: #ff151f;
+    background-color: rgba(0,0,0.1);
+    border: 2px solid #ff151f;
+    border-radius: 30px;
+    cursor: pointer;
+    align-items: center;
+    transition: all ease .2s;
+    &:hover{
+        background-color: #000000;
+        border: 2px solid #ff151f;
+    }
+}
+.wave{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 800px;
+  height: 800px;
+  margin-top: -600px;
+  margin-left: -370px;
+  background: #ff151f;
+  border-radius: 40%;
+  animation: shift 20s infinite linear;
+  z-index: ;
+}
+@keyframes shift{
+  from{
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+
+
+.text-center{
+	color:#fff;	
+	text-transform:uppercase;
+    font-size: 23px;
+    margin: -50px 0 80px 0;
+    display: block;
+    text-align: center;
+}
+.box{
+    margin-top: 100px;
+	position:absolute;
+	left:50%;
+	top:50%;
+    justify-content: center;
+    align-items: center;
+	transform: translate(-50%,-50%);
+    
+	border-radius:3px;
+    
+	padding:70px 100px;
+}
+.input-container{
+    width: 320px;
+	position:relative;
+	margin-bottom:25px;
+}
+.input-container label{
+	position:absolute;
+	top:0px;
+	left:0px;
+	font-size:18px;
+	color:#fff;	
+    pointer-event:none;
+	transition: all 0.2s ease-in-out;
+}
+.input-container input{ 
+  border:0;
+  border-bottom:1px solid #555;
+    
+    background:transparent;
+  width:100%;
+  padding:8px 0 5px 0;
+  font-size:16px;
+  color:#fff;
+}
+.input-container input:focus{ 
+ border:none;	
+ outline:none;
+ border-bottom:1px solid #ff151f;	
+ 
+}
+
+/*.btn:after{
+	content:"";
+	position:absolute;
+	background:rgba(0,0,0,0.50);
+	top:0;
+	right:0;
+	width:100%;
+	height:100%;
+}*/
+.input-container input:focus ~ label,
+.input-container input:valid ~ label{
+	top:-12px;
+	font-size:12px;
+	
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: black; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ff150f; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: white; 
+}

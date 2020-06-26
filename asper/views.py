@@ -5,10 +5,13 @@ from django.contrib.auth import login, logout, authenticate
 from datetime import date,datetime
 
 # Create your views here.
+# temp files
 
+
+#main files
 
 def Index(request):
-    return render(request, 'index.html')
+    return render(request, 'index2.html')
 
 
 
@@ -135,6 +138,8 @@ def SignUp(request):
     register = False
     if request.method == 'POST':
         dd = request.POST
+        # ---Signup----
+        '''
         u = dd['username']
         fn = dd['Firstname']
         ln = dd['Lastname']
@@ -143,45 +148,50 @@ def SignUp(request):
         p1 = dd['password1']
         i = 'https://nichemodels.co/wp-content/uploads/2019/03/user-dummy-pic.png'
         td = date.today()
+        '''
+        #---Registration----
+        q1 = dd['Q1']
+        q2 = dd['Q2']
+        q3 = dd['Q3']
+        q4 = dd['Q4']
+        q5 = dd['Q5']
+        q6 = dd['Q6']
+        q7 = dd['Q7']
+        q8 = dd['Q8']
+        q9 = dd['Q9']
+        q10 = dd['Q10']
 
-        udata = User.objects.filter(username=u)
+        udata = User.objects.filter(username=q2)
         if udata:
             error = True
-        elif p1 != p:
-            perror = True
         else:
             register = True
+            # ---Signup----
+            '''
             user = User.objects.create_user(username=u, password=p, email=e, first_name=fn, last_name=ln)
             UserDetail.objects.create(usr=user, image=i, EmailA=e, FirstN=fn, LastN=ln, JoinDate=td)
             UserSkills.objects.create(usr=user)
             UserPort.objects.create(usr=user, FirstN=fn, LastN=ln)
+            '''
+            user = User.objects.create_user(username=q2, password=q2, email=q2)
+            FirstTask.objects.create(usr=user, Q1=q1, Q2=q2, Q3=q3, Q4=q4, Q5=q5, Q6=q6, Q7=q7, Q8=q8, Q9=q9, Q10=q10)
+            return redirect('registration_s')
+
+
 
     d = {"error": error, 'perror': perror, 'register': register}
-    return render(request, 'signup.html', d)
+    return render(request, 'round0.html', d)
+
+def Registration_S(request):
+    return render(request,'recruitment/Registration_S.html')
+
 
 def Logout(request):
     logout(request)
     return redirect('SignIn')
 
 
-def FirstTk(request):
-    userdata = UserDetail.objects.filter(usr=request.user).first()
 
-    if request.method == 'POST':
-        d2 = request.POST
-        ftd = datetime.today()
-        q1 = d2['q1']
-        q2 = d2['q2']
-        q3 = d2['q3']
-        q4 = d2['q4']
-        q5 = d2['q5']
-        q6 = d2['q6']
-        q7 = d2['q7']
-        q8 = d2['q8']
-        FirstTask.objects.create(usr=request.user, ud=request.user.first_name, Q1=q1, Q2=q2, Q3=q3, Q4=q4, Q5=q5, Q6=q6, Q7=q7, Q8=q8, FirstTS=ftd)
-        return redirect('Profile')
-    f = {userdata:'userdata'}
-    return render(request, 'firsttask.html', f)
 
 def AllProfile(request):
 

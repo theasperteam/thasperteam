@@ -62,10 +62,13 @@
 					<li><a href="{% url 'Yourtask' %}">Your Task</a></li>
 					<li><a href="{% url 'logout' %}">Log Out</a></li>
 					{% else %}
-					<li><a href="{% url 'Index'  %}"><img src="{% static 'assets2/img/logo/main.png' %}" alt="profile" height="130" width="130"></a></li>
+					<li><a href="{% url 'Index'  %}"><img src="{% static 'img/logo/main.png' %}" alt="profile" height="130" width="130"></a></li>
 					<li>You are Guest User for more do signup</li><br><br>
 					<li><a href="{% url 'Index' %}">Main Home</a></li>
 					<li><a href="{% url 'SignUp' %}">SignUp</a></li>
+
+
+
 
 					{% endif %}
 				</ul>
